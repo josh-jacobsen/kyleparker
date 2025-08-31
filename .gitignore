@@ -18,9 +18,8 @@ wp-content/cache/
 wp-content/upgrade/
 wp-content/backup*/
 
-# Only track themes and plugins
+# Only track themes. If developing custom plugins then exclude these by name
 wp-content/*
-!wp-content/plugins/
 !wp-content/themes/
 
 # System files
