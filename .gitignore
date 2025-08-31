@@ -1,0 +1,28 @@
+# WordPress core files
+/wp-admin/
+/wp-includes/
+/wp-*.php
+/index.php
+/xmlrpc.php
+/readme.html
+/license.txt
+
+# Config files (different per environment)
+wp-config.php
+.htaccess
+.htpasswd
+
+# Uploads and cache
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backup*/
+
+# Only track themes and plugins
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+
+# System files
+.DS_Store
+Thumbs.db
