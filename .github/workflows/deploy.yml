@@ -22,7 +22,7 @@ jobs:
         protocol: ftps
         port: 21
         local-dir: ./wp-content/
-        server-dir: /kyleparker.nz/wp-content/
+        server-dir: /wp-content/
         exclude: |
           **/.git*
           **/.github/**
