@@ -13,22 +13,14 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
     
-    - name: Deploy via FTPS
+    # Deploy only themes for now
+    - name: Deploy Themes
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
-        server: ${{ secrets.FTP_SERVER }}
+        server: ftp.kyleparker.nz
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         port: 21
-        local-dir: ./wp-content/
-        server-dir: /wp-content/
-        exclude: |
-          **/.git*
-          **/.github/**
-          **/node_modules/**
-          **/.DS_Store
-          uploads/**
-          cache/**
-          upgrade/**
-          plugins/all-in-one-wp-migration/**
+        local-dir: ./wp-content/themes/
+        server-dir: /wp-content/themes/
