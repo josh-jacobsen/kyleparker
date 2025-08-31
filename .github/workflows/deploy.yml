@@ -31,3 +31,4 @@ jobs:
           uploads/**
           cache/**
           upgrade/**
+          plugins/all-in-one-wp-migration/**
