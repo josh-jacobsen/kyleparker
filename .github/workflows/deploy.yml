@@ -1,37 +1,33 @@
 name: Deploy to Live Site
 
-# When to run this workflow
 on:
   push:
-    branches: [ main ]    # Deploy when pushing to main branch
-  workflow_dispatch:      # Allow manual deployment from GitHub UI
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     
     steps:
-    # Step 1: Get the code
     - name: Checkout repository
       uses: actions/checkout@v3
     
-    # Step 2: Deploy to server
-    - name: Deploy via FTP
+    - name: Deploy via SFTP
       uses: SamKirkland/FTP-Deploy-Action@4.3.3
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        protocol: ftp
-        port: 21
+        protocol: sftp
+        port: 22
         local-dir: ./wp-content/
         server-dir: /kyleparker.nz/wp-content/
         exclude: |
           **/.git*
-          **/.git*/**
+          **/.github/**
           **/node_modules/**
           **/.DS_Store
-          **/Thumbs.db
           uploads/**
           cache/**
           upgrade/**
