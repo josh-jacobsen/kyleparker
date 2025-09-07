@@ -1,0 +1,99 @@
+
+	<nav class="navbar">
+		<div class="nav-content">
+			<div class="nav-brand">
+				<span class="nav-title">Kyle Parker</span>
+				<span class="nav-subtitle">Auckland Council</span>
+			</div>
+			<ul class="nav-links">
+				<li><a href="#about">About Kyle</a></li>
+				<li><a href="#policies">Policies</a></li>
+				<li><a href="#get-involved">Get Involved</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</div>
+	</nav>
+
+
+
+<style>
+	.navbar {
+		background: white;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1000;
+		padding: 1rem 0;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
+
+	.nav-content {
+		max-width: 1200px;
+		margin: 0 auto;
+		padding: 0 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.nav-brand {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.nav-title {
+		color: #2d7a2d;
+		font-size: 1.5rem;
+		font-weight: 700;
+		margin: 0;
+	}
+
+	.nav-subtitle {
+		color: #666;
+		font-size: 0.9rem;
+		font-weight: 400;
+		margin: 0;
+	}
+
+	.nav-links {
+		display: flex;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		gap: 2rem;
+	}
+
+	.nav-links a {
+		color: #333;
+		text-decoration: none;
+		font-weight: 500;
+		font-size: 1rem;
+		transition: color 0.2s;
+	}
+
+	.nav-links a:hover {
+		color: #2d7a2d;
+	}
+
+	@media (max-width: 768px) {
+		.nav-links {
+			display: none;
+		}
+
+		.nav-content {
+			justify-content: space-between;
+		}
+
+	}
+
+	@media (max-width: 480px) {
+
+		.nav-content {
+			padding: 0 1rem;
+		}
+
+	}
+
+
+</style>
