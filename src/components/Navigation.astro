@@ -2,14 +2,14 @@
 	<nav class="navbar">
 		<div class="nav-content">
 			<div class="nav-brand">
-				<span class="nav-title">Kyle Parker</span>
-				<span class="nav-subtitle">Auckland Council</span>
+				<a href="/"><span class="nav-title">Kyle Parker</span></a>
+				<a href="/"><span class="nav-subtitle">Auckland Council</span></a>
 			</div>
 			<ul class="nav-links">
-				<li><a href="#about">About Kyle</a></li>
-				<li><a href="#policies">Policies</a></li>
-				<li><a href="#get-involved">Get Involved</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<!-- <li><a href="#about">About Kyle</a></li> -->
+				<li><a href="/achievements">Achievements</a></li>
+				<!-- <li><a href="#get-involved">Get Involved</a></li> -->
+				<!-- <li><a href="#contact">Contact</a></li> -->
 			</ul>
 			<button class="hamburger" id="hamburger">
 				<span></span>
@@ -19,10 +19,10 @@
 		</div>
 		<div class="mobile-menu" id="mobile-menu">
 			<ul>
-				<li><a href="#about">About Kyle</a></li>
-				<li><a href="#policies">Policies</a></li>
-				<li><a href="#get-involved">Get Involved</a></li>
-				<li><a href="#contact">Contact</a></li>
+				<!-- <li><a href="#about">About Kyle</a></li> -->
+				<li><a href="/achievements">Achievements</a></li>
+				<!-- <li><a href="#get-involved">Get Involved</a></li> -->
+				<!-- <li><a href="#contact">Contact</a></li> -->
 			</ul>
 		</div>
 	</nav>
@@ -74,6 +74,10 @@
 	.nav-brand {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.nav-brand a {
+		text-decoration: none;
 	}
 
 	.nav-title {
